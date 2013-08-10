@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <description>$description$</description>
+    <projectUrl>http://fluent.stirno.com/</projectUrl>
+    <releaseNotes>ScriptCs script pack for FluentAutomation</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <language>en-US</language>
+    <tags>ScriptCs F14N PhantomJS Phantom WatiN Selenium Fluent Automation API</tags>
+  </metadata>
+</package>
