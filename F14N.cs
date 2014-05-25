@@ -192,12 +192,12 @@ namespace ScriptCs.FluentAutomation
             return this;
         }
 
-        public F14N Run(Action<INativeActionSyntaxProvider> action)
+        public F14N Run(Action<IActionSyntaxProvider> action)
         {
             return Run(string.Format("Test {0}", Results.Count + 1), action);
         }
 
-        public F14N Run(string name, Action<INativeActionSyntaxProvider> action)
+        public F14N Run(string name, Action<IActionSyntaxProvider> action)
         {
             if (!StartTime.HasValue) StartTime = DateTime.Now;
             if (Results.Count != 0) Console.WriteLine();

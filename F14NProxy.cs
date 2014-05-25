@@ -34,13 +34,13 @@ namespace ScriptCs.FluentAutomation
             return this;
         }
 
-        public F14NProxy Run(Action<INativeActionSyntaxProvider> action)
+        public F14NProxy Run(Action<IActionSyntaxProvider> action)
         {
             this.scriptPackInstance.Run(action);
             return this;
         }
 
-        public F14NProxy Run(string name, Action<INativeActionSyntaxProvider> action)
+        public F14NProxy Run(string name, Action<IActionSyntaxProvider> action)
         {
             this.scriptPackInstance.Run(name, action);
             return this;

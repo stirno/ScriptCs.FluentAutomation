@@ -30,37 +30,37 @@ namespace ScriptCs.FluentAutomation
         {
             get
             {
-                return Settings.UserTempDirectory;
+                return FluentSettings.Current.UserTempDirectory;
             }
 
             set
             {
-                Settings.UserTempDirectory = value;
+                FluentSettings.Current.UserTempDirectory = value;
             }
         }
 
         public string ScreenshotPath
         {
-            get { return Settings.ScreenshotPath; }
-            set { Settings.ScreenshotPath = value; }
+            get { return FluentSettings.Current.ScreenshotPath; }
+            set { FluentSettings.Current.ScreenshotPath = value; }
         }
 
         public bool ScreenshotOnFailedExpect
         {
-            get { return Settings.ScreenshotOnFailedExpect; }
-            set { Settings.ScreenshotOnFailedExpect = value; }
+            get { return FluentSettings.Current.ScreenshotOnFailedExpect; }
+            set { FluentSettings.Current.ScreenshotOnFailedExpect = value; }
         }
 
         public bool ScreenshotOnFailedAction
         {
-            get { return Settings.ScreenshotOnFailedAction; }
-            set { Settings.ScreenshotOnFailedAction = value; }
+            get { return FluentSettings.Current.ScreenshotOnFailedAction; }
+            set { FluentSettings.Current.ScreenshotOnFailedAction = value; }
         }
 
         public TimeSpan DefaultWaitTimeout
         {
-            get { return Settings.DefaultWaitTimeout; }
-            set { Settings.DefaultWaitTimeout = value; }
+            get { return FluentSettings.Current.WaitTimeout; }
+            set { FluentSettings.Current.WaitTimeout = value; }
         }
 
         /// <summary>
@@ -68,26 +68,26 @@ namespace ScriptCs.FluentAutomation
         /// </summary>
         public TimeSpan DefaultWaitUntilTimeout
         {
-            get { return Settings.DefaultWaitUntilTimeout; }
-            set { Settings.DefaultWaitUntilTimeout = value; }
+            get { return FluentSettings.Current.WaitUntilTimeout; }
+            set { FluentSettings.Current.WaitUntilTimeout = value; }
         }
 
         /// <summary>
         /// Time to wait before attempting to validate the provided condition for WatiUntil(). Defaults to 100 milliseconds.
         /// </summary>
-        public TimeSpan DefaultWaitUntilThreadSleep
+        public TimeSpan WaitUntilInterval
         {
-            get { return Settings.DefaultWaitUntilThreadSleep; }
-            set { Settings.DefaultWaitUntilThreadSleep = value; }
+            get { return FluentSettings.Current.WaitUntilInterval; }
+            set { FluentSettings.Current.WaitUntilInterval = value; }
         }
 
         /// <summary>
         /// Wait on all comamnds to be successful. Removes the need for explicit I.WaitUntil() calls for actions
         /// </summary>
-        public bool WaitOnAllCommands
+        public bool WaitOnAllActions
         {
-            get { return Settings.WaitOnAllCommands; }
-            set { Settings.WaitOnAllCommands = value; }
+            get { return FluentSettings.Current.WaitOnAllActions; }
+            set { FluentSettings.Current.WaitOnAllActions = value; }
         }
 
         /// <summary>
@@ -95,8 +95,8 @@ namespace ScriptCs.FluentAutomation
         /// </summary>
         public bool WaitOnAllExpects
         {
-            get { return Settings.WaitOnAllExpects; }
-            set { Settings.WaitOnAllExpects = value; }
+            get { return FluentSettings.Current.WaitOnAllExpects; }
+            set { FluentSettings.Current.WaitOnAllExpects = value; }
         }
 
         /// <summary>
@@ -104,8 +104,8 @@ namespace ScriptCs.FluentAutomation
         /// </summary>
         public bool MinimizeAllWindowsOnTestStart
         {
-            get { return Settings.MinimizeAllWindowsOnTestStart; }
-            set { Settings.MinimizeAllWindowsOnTestStart = value; }
+            get { return FluentSettings.Current.MinimizeAllWindowsOnTestStart; }
+            set { FluentSettings.Current.MinimizeAllWindowsOnTestStart = value; }
         }
 
         /// <summary>
@@ -113,8 +113,8 @@ namespace ScriptCs.FluentAutomation
         /// </summary>
         public int? WindowHeight
         {
-            get { return Settings.WindowHeight; }
-            set { Settings.WindowHeight = value; }
+            get { return FluentSettings.Current.WindowHeight; }
+            set { FluentSettings.Current.WindowHeight = value; }
         }
 
         /// <summary>
@@ -122,8 +122,8 @@ namespace ScriptCs.FluentAutomation
         /// </summary>
         public int? WindowWidth
         {
-            get { return Settings.WindowWidth; }
-            set { Settings.WindowWidth = value; }
+            get { return FluentSettings.Current.WindowWidth; }
+            set { FluentSettings.Current.WindowWidth = value; }
         }
     }
 }
